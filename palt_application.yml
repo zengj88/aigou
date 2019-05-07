@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 8001
+spring:
+  profiles: dev #开发环境
+  application:
+    name: USER-PROBIDER
+eureka:
+  client:
+    server-url:
+      defaultZone: http://eureka-7001.com:7001/eureka/ #告诉服务提供者把服务注册在哪里
+  instance:
+    prefer-ip-address: true #显示ip
+---
+server:
+  port: 8848
+spring:
+  profiles: test #开发环境
+  application:
+    name: USER-PROBIDER-TEST
+eureka:
+  client:
+    server-url:
+      defaultZone: http://eureka-7001.com:7001/eureka/ #告诉服务提供者把服务注册在哪里
+  instance:
+    prefer-ip-address: true #显示ip
