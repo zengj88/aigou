@@ -17,7 +17,7 @@ eureka:
     prefer-ip-address: true #显示ip
 ---
 server:
-  port: 8848
+  port: 8847
 spring:
   profiles: test #开发环境
   application:
